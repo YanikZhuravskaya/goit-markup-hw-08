@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Normalize styles start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <!-- Normalize styles end -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Our Portfolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a class="logo" href="./index.html"
+          ><span class="logo-left" lang="en">Web</span
+          ><span class="logo-right" lang="en">Studio</span></a
+        >
+        <button class="mobile-menu-btn" type="button" data-menu-button>
+          <svg class="mobile-menu-icon" width="40" height="40">
+            <use
+              class="mobile-menu-burger"
+              href="./images/logo.svg#icon-menu"
+            ></use>
+            <use
+              class="mobile-menu-close"
+              href="./images/logo.svg#icon-close-btn"
+            ></use>
+          </svg>
+        </button>
+
+        <nav class="pagination">
+          <ul class="pagination__list list">
+            <li class="pagination__item">
+              <a class="pagination__link" href="./index.html">Студия</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link current" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="contacts">
+          <ul class="contacts__list list">
+            <li class="contacts__item">
+              <a class="contacts__link" href="mailto:info@devstudio.com"
+                ><svg class="contacts__icon" width="16" height="12">
+                  <use href="./images/logo.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+380961111111"
+                ><svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/logo.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="portfolio">
+        <div class="container">
+          <h1 hidden>Наше портфолио</h1>
+          <ul class="filter list">
+            <li class="filter__item">
+              <button class="btm-all filter__btm active" type="button">
+                Все
+              </button>
+            </li>
+            <li class="filter__item">
+              <button class="btm-web filter__btm" type="button">
+                Веб-сайты
+              </button>
+            </li>
+            <li class="filter__item">
+              <button class="btm-application filter__btm" type="button">
+                Приложения
+              </button>
+            </li>
+            <li class="filter__item">
+              <button class="btm-disign filter__btm" type="button">
+                Дизайн
+              </button>
+            </li>
+            <li class="filter__item">
+              <button class="btm-marketing filter__btm" type="button">
+                Маркетинг
+              </button>
+            </li>
+          </ul>
+          <ul class="job list">
+            <li class="job__item">
+              <article class="job__element">
+                <div class="job__img">
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl1-desc.webp    1x,
+                        ./images/portfolio/prfl1-desc@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl1-desc.jpg    1x,
+                        ./images/portfolio/prfl1-desc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl1-tab.webp    1x,
+                        ./images/portfolio/prfl1-tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl1-tab.jpg    1x,
+                        ./images/portfolio/prfl1-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl1-mob.webp    1x,
+                        ./images/portfolio/prfl1-mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl1-mob.jpg    1x,
+                        ./images/portfolio/prfl1-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- last chance image -->
+                    <img
+                      src="./images/portfolio/prfl1-mob.jpg"
+                      alt="Технокряк"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__title">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </div>
+                <div class="job__content">
+                  <h2 class="job__name">Технокряк</h2>
+                  <p class="job__type">Веб-сайт</p>
+                </div>
+              </article>
+            </li>
+            <li class="job__item">
+              <article class="job__element">
+                <div class="job__img">
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl2-desc.webp    1x,
+                        ./images/portfolio/prfl2-desc@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl2-desc.jpg    1x,
+                        ./images/portfolio/prfl2-desc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl2-tab.webp    1x,
+                        ./images/portfolio/prfl2-tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl2-tab.jpg    1x,
+                        ./images/portfolio/prfl2-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl2-mob.webp    1x,
+                        ./images/portfolio/prfl2-mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl2-mob.jpg    1x,
+                        ./images/portfolio/prfl2-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- last chance image -->
+                    <img
+                      src="./images/portfolio/prfl2-mob.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__title">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </div>
+                <div class="job__content">
+                  <h2 class="job__name">
+                    Постер <span lang="en">New Orlean vs Golden Star</span>
+                  </h2>
+                  <p class="job__type">Дизайн</p>
+                </div>
+              </article>
+            </li>
+              <article class="job__element">
+                <div class="job__img">
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl3-desc.webp    1x,
+                        ./images/portfolio/prfl3-desc@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl3-desc.jpg    1x,
+                        ./images/portfolio/prfl3-desc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl3-tab.webp    1x,
+                        ./images/portfolio/prfl3-tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl3-tab.jpg    1x,
+                        ./images/portfolio/prfl3-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl3-mob.webp    1x,
+                        ./images/portfolio/prfl3-mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl3-mob.jpg    1x,
+                        ./images/portfolio/prfl3-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- last chance image -->
+                    <img
+                      src="./images/portfolio/prfl3-mob.jpg"
+                      alt="Ресторан Seafood"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__title">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </div>
+                <div class="job__content">
+                  <h2 class="job__name">
+                    Ресторан <span lang="en">Seafood</span>
+                  </h2>
+                  <p class="job__type">Приложение</p>
+                </div>
+              </article>
+            </li>
+            <li class="job__item">
+              <article class="job__element">
+                <div class="job__img">
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl4-desc.webp    1x,
+                        ./images/portfolio/prfl4-desc@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl4-desc.jpg    1x,
+                        ./images/portfolio/prfl4-desc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl4-tab.webp    1x,
+                        ./images/portfolio/prfl4-tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl4-tab.jpg    1x,
+                        ./images/portfolio/prfl4-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl4-mob.webp    1x,
+                        ./images/portfolio/prfl4-mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl4-mob.jpg    1x,
+                        ./images/portfolio/prfl4-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- last chance image -->
+                    <img
+                      src="./images/portfolio/prfl4-mob.jpg"
+                      alt="Проект Prime"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__title">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </div>
+                <div class="job__content">
+                  <h2 class="job__name">Проект <span lang="en">Prime</span></h2>
+                  <p class="job__type">Маркетинг</p>
+                </div>
+              </article>
+            </li>
+            <li class="job__item">
+              <article class="job__element">
+                <div class="job__img">
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl5-desc.webp    1x,
+                        ./images/portfolio/prfl5-desc@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl5-desc.jpg    1x,
+                        ./images/portfolio/prfl5-desc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl5-tab.webp    1x,
+                        ./images/portfolio/prfl5-tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl5-tab.jpg    1x,
+                        ./images/portfolio/prfl5-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl5-mob.webp    1x,
+                        ./images/portfolio/prfl5-mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl5-mob.jpg    1x,
+                        ./images/portfolio/prfl5-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- last chance image -->
+                    <img
+                      src="./images/portfolio/prfl5-mob.jpg"
+                      alt="Проект Boxes"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__title">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </div>
+                <div class="job__content">
+                  <h2 class="job__name">Проект <span lang="en">Boxes</span></h2>
+                  <p class="job__type">Приложение</p>
+                </div>
+              </article>
+            </li>
+            <li class="job__item">
+              <article class="job__element">
+                <div class="job__img">
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl6-desc.webp    1x,
+                        ./images/portfolio/prfl6-desc@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl6-desc.jpg    1x,
+                        ./images/portfolio/prfl6-desc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl6-tab.webp    1x,
+                        ./images/portfolio/prfl6-tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl6-tab.jpg    1x,
+                        ./images/portfolio/prfl6-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl6-mob.webp    1x,
+                        ./images/portfolio/prfl6-mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl6-mob.jpg    1x,
+                        ./images/portfolio/prfl6-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- last chance image -->
+                    <img
+                      src="./images/portfolio/prfl6-mob.jpg"
+                      alt="Inspiration has no Borders"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__title">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </div>
+                <div class="job__content">
+                  <h2 class="job__name" lang="en">
+                    Inspiration has no Borders
+                  </h2>
+                  <p class="job__type">Веб-сайт</p>
+                </div>
+              </article>
+            </li>
+            <li class="job__item">
+              <article class="job__element">
+                <div class="job__img">
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl7-desc.webp    1x,
+                        ./images/portfolio/prfl7-desc@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl7-desc.jpg    1x,
+                        ./images/portfolio/prfl7-desc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl7-tab.webp    1x,
+                        ./images/portfolio/prfl7-tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl7-tab.jpg    1x,
+                        ./images/portfolio/prfl7-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl7-mob.webp    1x,
+                        ./images/portfolio/prfl7-mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl7-mob.jpg    1x,
+                        ./images/portfolio/prfl7-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- last chance image -->
+                    <img
+                      src="./images/portfolio/prfl7-mob.jpg"
+                      alt="Издание Limited Edition"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__title">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </div>
+                <div class="job__content">
+                  <h2 class="job__name">
+                    Издание <span lang="en">Limited Edition</span>
+                  </h2>
+                  <p class="job__type">Дизайн</p>
+                </div>
+              </article>
+            </li>
+            <li class="job__item">
+              <article class="job__element">
+                <div class="job__img">
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl8-desc.webp    1x,
+                        ./images/portfolio/prfl8-desc@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl8-desc.jpg    1x,
+                        ./images/portfolio/prfl8-desc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl8-tab.webp    1x,
+                        ./images/portfolio/prfl8-tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl8-tab.jpg    1x,
+                        ./images/portfolio/prfl8-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl8-mob.webp    1x,
+                        ./images/portfolio/prfl8-mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl8-mob.jpg    1x,
+                        ./images/portfolio/prfl8-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- last chance image -->
+                    <img
+                      src="./images/portfolio/prfl8-mob.jpg"
+                      alt="Проект LAB"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__title">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </div>
+                <div class="job__content">
+                  <h2 class="job__name">Проект <span lang="en">LAB</span></h2>
+                  <p class="job__type">Маркетинг</p>
+                </div>
+              </article>
+            </li>
+            <li class="job__item">
+              <article class="job__element">
+                <div class="job__img">
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl9-desc.webp    1x,
+                        ./images/portfolio/prfl9-desc@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/prfl9-desc.jpg    1x,
+                        ./images/portfolio/prfl9-desc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl9-tab.webp    1x,
+                        ./images/portfolio/prfl9-tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prfl9-tab.jpg    1x,
+                        ./images/portfolio/prfl9-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl9-mob.webp    1x,
+                        ./images/portfolio/prfl9-mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/prfl9-mob.jpg    1x,
+                        ./images/portfolio/prfl9-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- last chance image -->
+                    <img
+                      src="./images/portfolio/prfl9-mob.jpg"
+                      alt="Growing Business"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__title">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </div>
+                <div class="job__content">
+                  <h2 class="job__name" lang="en">Growing Business</h2>
+                  <p class="job__type">Приложение</p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer-contacts">
+          <div class="sidebar">
+            <a class="logo" href="./index.html"
+              ><span class="logo-left" lang="en">Web</span
+              ><span class="footerlogo-right" lang="en">Studio</span></a
+            >
+            <address class="adress">
+              <ul class="adress__list list">
+                <li class="adress__item">
+                  <a
+                    class="adress__link adress__link--google"
+                    href="https://goo.gl/maps/45dkTTZUXiDFG3Hn6"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="adress__item">
+                  <a
+                    class="adress__link adress__link--mail"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="adress__item">
+                  <a
+                    class="adress__link adress__link--tel"
+                    href="tel:+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="social">
+            <h2 class="social__title">присоединяйтесь</h2>
+            <ul class="social__list list">
+              <li>
+                <a
+                  class="social__link social__link--footer"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="instagram"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/logo.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="social__link social__link--footer"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="twitter"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/logo.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="social__link social__link--footer"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="facebook"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/logo.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="social__link social__link--footer"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="linkedin"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/logo.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mailbox">
+          <h2 class="mailbox__title">подпишитесь на рассылку</h2>
+          <form action="javascript:void(0);">
+            <div class="mailbox__block">
+              <input
+                class="mailbox__input"
+                type="email"
+                name="footer-mail-input"
+                placeholder="E-mail"
+              />
+              <div class="mailbox__btn-container">
+                <button class="mailbox__btn" type="submit">Подписаться</button>
+                <svg class="mailbox__icon" width="24" height="24">
+                  <use href="./images/logo.svg#icon-airplane-btn"></use>
+                </svg>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <div class="mobile-menu" data-menu>
+      <nav class="mobile-pagination">
+        <ul class="mobile-pagination__list list">
+          <li class="mobile-pagination__item">
+            <a class="mobile-pagination__link" href="./index.html">Студия</a>
+          </li>
+          <li class="mobile-pagination__item">
+            <a
+              class="mobile-pagination__link mobile-current"
+              href="./portfolio.html"
+              >Портфолио</a
+            >
+          </li>
+          <li class="mobile-pagination__item">
+            <a class="mobile-pagination__link" href="">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-contacts">
+        <ul class="mobile-contacts__list list">
+          <li class="mobile-contacts__item">
+            <a
+              class="mobile-contacts__link mobile-current"
+              href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile-contacts__item">
+            <a class="mobile-contacts__link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="mobile-menu-socials">
+        <ul class="mobile-menu-socials__list list">
+          <li class="mobile-menu-socials__item">
+            <a class="mobile-menu-socials__link link" href=""> Instagram </a>
+          </li>
+          <li class="mobile-menu-socials__item">
+            <a class="mobile-menu-socials__link link" href="">Twitter</a>
+          </li>
+          <li class="mobile-menu-socials__item">
+            <a class="mobile-menu-socials__link link" href="">Facebook</a>
+          </li>
+          <li class="mobile-menu-socials__item">
+            <a class="mobile-menu-socials__link link" href="">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/mobile-menu.js"></script>
+  </body>
+</html>

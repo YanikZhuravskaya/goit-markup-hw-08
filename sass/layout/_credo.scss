@@ -1,0 +1,50 @@
+/* Our credo */
+.credo {
+    padding: 60px 0px;
+    @media screen and(min-width: 1200px) {
+        padding: 94px 0px;
+    }
+
+    &__list {
+        @include card-set(30px);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        width: 450px;
+        padding: 0px;
+        
+        @media screen and(min-width: 768px){
+            width: 354px;
+        }
+        @media screen and(min-width: 1200px) {
+            width: 270px;
+        }
+    }
+
+    &__iconbox {
+        @include get-img-styles;
+        
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        background-color: var(--not-active-btm-color);
+        border-radius: 4px;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        @include get-font-style(normal, 700, var(--most-used-font-size), 1.14, 0.03em);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    &__textstyle {
+        @include get-font-style(null, 400, null, 1.71, null);
+        text-transform: none;
+
+        color: var(--article-color);
+    }
+}

@@ -1,0 +1,48 @@
+/* ============ */
+/* site footer */
+/* ============ */
+.footer {
+    background-color: var(--baner-color);
+    padding: 60px 0px;
+
+    &__container {
+        display: flex;
+        @media screen and (max-width: 1199px) {
+            flex-direction: column;
+            gap: 60px;       
+            align-items: center;
+            justify-content: center; 
+        }
+    }
+}
+
+ .footer-contacts {
+    display: flex;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        gap: 60px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: 61px;
+        gap: 165px;
+    }
+
+ }
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-right: 0px;
+
+    @media screen and (max-width: 1199px) {
+        align-items: center;
+        justify-content: center;
+    }   
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 70px;
+    }    
+}

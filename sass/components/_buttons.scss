@@ -1,0 +1,140 @@
+%btn-font-style{
+    @include get-font-style(normal, 700, 16px, 1.88, 0.06em);
+}
+
+%btn-basic{
+    color: var(--akcent-light-color);
+    background: var(--akcent-color);
+    
+    border-radius: 4px;
+    border-color: transparent;
+    box-shadow: var(--popular-shadow);
+
+    cursor: pointer;
+}
+
+%btn-activity{
+    transition: background-color var(--animation-time) var(--animation-type);
+    
+    &:focus,
+    &:hover {
+        background-color: var(--background-btn-color);
+    }
+}
+
+.baner__btn {
+    font-family: inherit;
+    @extend %btn-font-style;
+    @extend %btn-basic;
+
+    padding: 10px 32px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    cursor: pointer;
+
+    @extend %btn-activity;
+}
+
+.mailbox__btn {
+    @extend %btn-font-style;
+    @extend %btn-basic;
+    
+    padding: 10px 62px 10px 29px;
+
+    @extend %btn-activity;
+
+    &-container {
+        position: relative;
+        margin-left: 12px;
+    }
+}
+
+/* close round button */
+.close-btn {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-8px, 8px);
+
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--akcent-light-color);
+    cursor: pointer;
+
+    transition-property: fill;
+    transition-duration: var(--animation-time);
+    transition-timing-function: var(--animation-type);
+
+    &:hover,
+    &:focus {
+        fill: var(--akcent-color);
+    }
+}
+
+/* mobile menu buttons */
+.mobile-menu-btn{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    z-index: 10;
+
+    border: transparent;
+    background-color: var(--akcent-light-color);
+    cursor: pointer;
+
+    transition-property: fill;
+    transition-duration: var(--animation-time);
+    transition-timing-function: var(--animation-type);
+
+    &:hover,
+    &:focus {
+        fill: var(--akcent-color);
+    }
+
+    @media screen and (min-width:768px) {
+        display: none; 
+    }
+}
+
+.mobile-menu-burger{
+    .mobile-menu-btn.is-open &{
+        opacity: 0;
+    }
+}
+
+.mobile-menu-close{
+    opacity: 0;
+    .mobile-menu-btn.is-open & {
+        opacity: 1;
+    }
+}
+
+/* submit button */
+.modal__submit-btn {
+    @extend %btn-font-style;
+    @extend %btn-basic;
+    
+    padding: 10px 55px 10px 56px;
+    
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @extend %btn-activity;
+}

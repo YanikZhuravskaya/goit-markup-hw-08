@@ -1,0 +1,14 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: var(--most-used-font-size);
+    color: var(--title-color);
+}
+
+.title {
+    @include get-font-style(normal, 700, 28px, 1.18, 0.03em);
+    @media screen and (min-width: 1200px) {
+        @include get-font-style(normal, 700, 36px, 1.17, 0.03em);
+    }
+    
+}
+

@@ -1,0 +1,47 @@
+/* Checkbox on modal window */
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    &__custom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 15px;
+        outline: 2px solid #212121;
+        outline-offset: -2px;
+        border-radius: 2px;
+
+        transition-property: background-color, outline-color;
+        transition-duration: var(--animation-time);
+        transition-timing-function: var(--animation-type);
+    }
+
+    &__input:checked+&__custom {
+        background-color: var(--akcent-color);
+        outline-color: var(--akcent-color);
+    }
+
+    &__icon {
+        fill: var(--akcent-light-color);
+    }
+
+    &__agreement {
+        @include get-font-style(normal, 400, 12px, 1.17, 0.03em);
+        @media screen and (min-width: 1200px) {
+            @include get-font-style(normal, 400, 14px, 1.71, 0.03em);
+        }
+        color: var(--article-color);
+        padding-left: 7px;
+        user-select: none;
+    }
+
+    &__agreement--style {
+        color: var(--akcent-color);
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,17 @@
+.logo {
+    font-family: var(--second-font), sans-serif;
+    @include get-font-style(null, 700, 26px, 1.19, 0.03em);
+    text-decoration: none;
+
+    &-left {
+        color: var(--akcent-color);
+    }
+
+    &-right {
+        color: #292929;
+    }
+}
+
+.footerlogo-right {
+    color: var(--akcent-light-color);
+}

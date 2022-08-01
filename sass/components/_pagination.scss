@@ -1,0 +1,39 @@
+.pagination{
+    @media screen and (max-width: 767px){
+        display: none;
+    }
+}
+
+.pagination__list {
+    display: flex;
+    
+    @media screen and (min-width: 768px) {
+        margin-left: 88px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-left: 93px;
+    }
+    padding-left: 0px;
+}
+
+.pagination__link{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--title-color);
+    transition: color var(--animation-time) var(--animation-type);
+
+    &:focus,
+    &:hover {
+        color: var(--akcent-color);
+    }
+}
+
+.pagination__item {
+    @include get-font-style(null, 500, null, 1.71, 0.02em);
+
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}

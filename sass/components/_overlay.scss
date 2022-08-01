@@ -1,0 +1,26 @@
+.overlay {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--akcent-color-rgb), 0.9);
+
+    transform: translateY(100%);
+    transition: transform var(--animation-time) var(--animation-type);
+    
+    &__title {
+        padding: 77px 24px;
+        @media screen and(min-width: 768px) {
+            padding: 49px 24px;
+        }
+        @media screen and(min-width: 1200px) {
+            padding: 63px 24px;
+        }
+
+        @include get-font-style(normal, 400, 18px, 1.56, 0.03em);
+        color: var(--akcent-light-color);
+    }
+}

@@ -1,0 +1,25 @@
+@mixin get-font-style($fstyle, $fweight, $fsize, $lheight, $lspasing) {
+    font-style: $fstyle;
+    font-weight: $fweight;
+    font-size: $fsize;
+    line-height: $lheight;
+    letter-spacing: $lspasing;
+}
+
+@mixin get-img-styles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@mixin card-set($t-gap) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $t_gap;
+}
+
+@mixin card-set-item($t-gap,$num-items) {
+    flex-basis: calc((100%-#{$t-gap}*#{$num-items})/#{$num-items});
+}

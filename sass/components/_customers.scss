@@ -1,0 +1,55 @@
+/* regular customers */
+.customers {
+    padding: 60px 0px;
+    @media screen and(min-width: 1200px) {
+        padding: 94px 0px;
+    }
+
+    &__title {
+        text-align: center;
+        
+        margin-bottom: 30px;
+        @media screen and(min-width: 1200px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__list {
+        @include card-set(30px);
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
+}
+
+.customers__link {
+    @include get-img-styles;
+    
+    width: 210px;
+    height: 92px;
+    padding: 0px;
+
+    @media screen and(min-width: 768px) {
+        width: 226px;
+    }
+
+    @media screen and(min-width: 1200px) {
+        width: 170px;
+    }
+
+    color: var(--not-active-icon-color);
+    background-color: var(--akcent-light-color);
+    border: 1px solid var(--not-active-icon-color);
+    border-radius: 4px;
+
+    transition-property: color, border-color;
+    transition-duration: var(--animation-time);
+    transition-timing-function: var(--animation-type);
+
+    &:hover,
+    &:focus {
+        color: var(--akcent-color);
+        border-color: var(--akcent-color);
+    }
+}
