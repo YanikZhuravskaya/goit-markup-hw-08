@@ -815,7 +815,7 @@ a {
   transition: box-shadow var(--animation-time) var(--animation-type);
   transition: box-shadow var(--animation-time) var(--animation-type), -webkit-box-shadow var(--animation-time) var(--animation-type);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .job__element {
     width: 354px;
     height: 440px;
@@ -824,6 +824,7 @@ a {
 @media screen and (min-width: 1200px) {
   .job__element {
     width: 370px;
+    height: 404px;
   }
 }
 .job__element:hover, .job__element:focus {
